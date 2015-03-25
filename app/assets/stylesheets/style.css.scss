@@ -1,0 +1,190 @@
+$dark-red: rgb(75,0,0);
+$box-color: rgb(150,0,0);
+$text-color: rgb(170,170,170);/*rgb(150,0,0);*/
+$background-color: rgb(75,0,0);/*rgb(170,170,170);*/
+$hover-color: rgb(75,50,50);
+$box-shadow-color: rgba(0,0,0,0.5);
+
+$maindiv-width: 760px;
+
+
+$header-color: $text-color;
+$link-color: $text-color;
+
+@mixin standard-border {
+  border-color: $box-color;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.banner {
+  width: 150px; 
+}
+
+p{/*}, .main-text{*/
+  color: $text-color;
+}
+
+body {
+  margin-left:auto; 
+  margin-right:auto;
+  font {
+    family: serif;
+    size: 18px;
+  }
+  background-color: $background-color;
+}
+
+#maindiv {
+  width: $maindiv-width;
+  text-align: left;
+}
+
+#seitendiv {
+  width: 75%;
+}
+
+#bannerdiv {
+  width: 25%;
+}
+
+table tbody tr:nth-child(even) {
+  color: rgb(70,70,70);
+}
+
+table {
+  color: $text-color;
+  text-align: center;
+  border-width: 2px;
+  @include standard-border;
+  margin: 10px;
+}
+
+#maintable {
+  text-align: left;
+}
+
+th {
+  vertical-align: top;
+  horizontal-align: left;
+}
+
+table.center{
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+p::first-letter {
+  font-size: 24px;
+}
+
+label {
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-color;
+  font-family: fantasy;
+}
+
+#navigationbox {
+  border-width: 4px; 
+  @include standard-border;
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px 1px $box-shadow-color;
+  text-align: center;
+  margin:5px;
+  margin-top: 0px;
+  padding: 10px;
+}
+
+#navigationbox:hover{
+  border-color: $hover-color; 
+  transition-properties: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+.navigationlink {
+  color: darken($link-color, 10%);
+  border-width: 2px; 
+  margin: 2px;
+  padding: 2px;
+  @include standard-border;
+}  
+
+
+.navigationlink:hover {
+  border-color: $hover-color; 
+  transition-properties: all;
+  transition-duration: 2s;
+  transform: scale(1.1);
+}
+
+
+#infobox {
+  border-width: 2px; 
+  @include standard-border;
+  box-shadow: 5px 5px 3px 1px $box-shadow-color;
+  text-align: center;
+  padding: 3px;
+}
+
+#link_to_overview {
+  font-weight: bold;
+}
+
+div.center {
+   text-align: center; 
+}
+
+img {
+  @include standard-border;
+  border-width: 5px;
+  margin: 10px;
+  box-shadow: 5px, 5px, 50px, $dark-red;
+}
+
+.benchmark {
+  width: 600px;
+}
+
+.banner{
+  float: right;
+  border-width: 0px;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 0px;
+  box-shadow: 0px, 0px, 0px;
+}
+
+#releases {
+  clear: both;
+}
+
+#optimization-lib-links, #analysis-lib-links { 
+  display: none;
+  width: 610px;
+  margin: 10px;
+  position: absolute;
+  background-color: $background-color;
+}
+
+#scippy{
+  height: 200px;
+  width: 200px;
+  float: left;
+}
+
+th {
+  padding: 7px;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+}

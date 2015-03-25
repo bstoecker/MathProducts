@@ -1,0 +1,83 @@
+%nav#navigationbox
+  = link_to "Home", page_path(name: 'home'), {class: "navigationlink"}
+%div
+  %h2 Libraries
+  %h3 Our Library offers
+  %nav#navigationbox
+    %a{:href => "#", class: "navigationlink", id: "optimization-libs"} Optimization Libraries
+    %a{:href => "#", class: "navigationlink", id: "analysis-libs"} Analysis Libraries
+  %div#optimization-lib-links
+    %p You need optimization libraries?  These are our offered solutions.
+    / _blank öffnet diesen link in neuem tab
+    / beliebiger name (e.g. scip) öffnet diesen link in neuem tab, wird jedoch etwas im gleichen kontext aufgerufen, wird dies im selben fenster geöffnet
+    %ul
+      %li{:title => "Solving Constraint Integer Problems"}
+        = link_to "SCIP", product_path(name: 'scip'), {class: "navigationlink"}
+      / title erzeugt info, die erscheint, wenn man mit der Maus drüber fährt
+      %li
+        = link_to "CPLEX", product_path(name: 'cplex'), {class: "navigationlink"}
+      %li
+        = link_to "GuRoBi", product_path(name: 'gurobi'), {class: "navigationlink"}
+  %div#analysis-lib-links
+    %p You need analysis libraries?  These are our offered solutions.
+    %ul
+      %li
+        = link_to "Alglib", product_path(name: 'alglib'), {class: "navigationlink"}
+      %li
+        = link_to "Derive", product_path(name: 'derive'), {class: "navigationlink"}
+      %li
+        = link_to "Mathematica", product_path(name: 'mathematica'), {class: "navigationlink"}
+      %li
+        = link_to "Matlab", product_path(name: 'matlab'), {class: "navigationlink"}
+  
+  %div.center
+    %img.benchmark{:alt => "benchmark", :src => "/assets/benchmark.png"}/
+    
+%h2 Pricing
+%div
+  %table.center
+    %thead
+      %tr
+        %th Software
+        %th Price
+        %th Licence
+      %thead
+        %tbody
+          %tr
+            %th{:colspan => "3"}
+              Optimization software
+          %tr
+            %th SCIP
+            %th 2,000.00 €
+            %th Developing license
+          %tr
+            %th CPLEX
+            %th 8,000.00 €
+            %th Core license
+          %tr
+            %th GuRoBi
+            %th 8,500.00 €
+            %th Core licence
+          %tr
+            %th{:colspan => "3"}
+              Analysis software
+          %tr
+            %th Alglib
+            %th 1,700.00 €
+            %th Developing license
+          %tr
+            %th Derive
+            %th 600.00 €
+            %th User-End license
+          %tr
+            %th Mathematica
+            %th 1,500.00 €
+            %th User-End licence
+          %tr
+            %th Matlab
+            %th 2,500.00 €
+            %th User-End licence
+%p
+  You need additional informations? Just contact us
+  = succeed "." do
+    %a{:href => "contact.html", class: "navigationlink"} here

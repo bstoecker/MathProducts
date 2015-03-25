@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title
+      "The math library store"
+    = stylesheet_link_tag "application"
+  %body 
+    %h1#top The math library store
+    %div.center
+      %img#time{:alt => "time", :src => "/assets/time.jpg"}/
+    %table.center#maintable
+      %tbody
+        %tr
+          %th
+            %div#seitenbreite
+              = yield
+          %th
+            %div
+              %img.banner{:alt => "benchmark", :src => "/assets/banner.png"}/
+    %footer
+      %p &copy Bernhard Stöcker 2013
+    = javascript_include_tag "application"
+    %script{:src => "/javascript/app.js", :type => "text/javascript"}
+//    %script{:src => "/javascripts/jquery.js", :type=> "text/javascript"}
+//    %script{:src => "/javascripts/jquery-ui.js",  :type=> "text/javascript"}
+//    %script{:src => "/javascripts/jrails.js", :type=> "text/javascript"}

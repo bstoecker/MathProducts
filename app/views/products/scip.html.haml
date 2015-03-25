@@ -1,0 +1,42 @@
+%nav#navigationbox
+  = link_to "Home", page_path(name: 'home'), {class: "navigationlink"}
+  = link_to "Overview", page_path(name: 'overview'), {class: "navigationlink"}
+%h2{:title => "Solving Constraint Integer Problems"} SCIP
+
+%img#scippy{:alt => "time", :src => "/assets/scippy.png"}/
+%div
+  %p
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  
+    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+%button#mybutton Button  
+  
+%div#releases
+  %h3 Releases
+  %div.center
+    %table.center
+      %thead
+        %tr
+          %th Version
+          %th Release date
+        %thead
+          %tbody
+            %tr
+              %th 1.0
+              %th 05.2005
+            %tr
+              %th 2.0
+              %th 09.2008
+            %tr
+              %th 3.0
+              %th 12.20012
+%p
+  Additional informations can be found
+  = link_to "here", "http://scip.zib.de/", {class: "navigationlink", target: "scip"}
+  
+%div
+  %p Sie möchten Lizenzen erwerben? 
+%div
+  %label
+    Anzahl der Lizenzen: 
+    %input{:name => "Lizenzen", :required => "", :id => "NumberOfLicenses"}
